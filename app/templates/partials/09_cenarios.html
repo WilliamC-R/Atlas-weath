@@ -1,0 +1,34 @@
+
+<section class="panel tab-cenarios" id="panel-cenarios">
+  <div class="panel-head">
+    <div>
+      <h3>Cenários de investimento</h3>
+      <p>Conservador, moderado e sofisticado com premissas editáveis em percentuais.</p>
+    </div>
+    <div class="chip">Projeção</div>
+  </div>
+
+  <div class="section-block">
+    <h4>Premissas dos ativos</h4>
+    <div class="premise-grid">
+      <div class="premise-box"><h5>CDI (%)</h5><div class="field"><input id="cdi_return" type="number" step="0.01" value="10.83"></div></div>
+      <div class="premise-box"><h5>Ouro (%)</h5><div class="field"><input id="gold_return" type="number" step="0.01" value="59.64"></div></div>
+      <div class="premise-box"><h5>NTN-B (%)</h5><div class="field"><input id="ntnb_return" type="number" step="0.01" value="-12.45"></div></div>
+      <div class="premise-box"><h5>NTN-F (%)</h5><div class="field"><input id="ntnf_return" type="number" step="0.01" value="-13.29"></div></div>
+      <div class="premise-box"><h5>Ibovespa (%)</h5><div class="field"><input id="ibovespa_return" type="number" step="0.01" value="-10.38"></div></div>
+      <div class="premise-box"><h5>S&P 500 BRL (%)</h5><div class="field"><input id="sp500_brl_return" type="number" step="0.01" value="58.26"></div></div>
+      <div class="premise-box"><h5>FIIs (%)</h5><div class="field"><input id="fiis_return" type="number" step="0.01" value="-5.89"></div></div>
+      <div class="premise-box"><h5>Vol. sofisticado (%)</h5><div class="field"><input id="sophisticated_volatility" type="number" step="0.01" value="16.00"></div></div>
+    </div>
+  </div>
+
+  <div class="scenario-cards" id="scenarioCards">
+    <div class="scenario-card"><h4>Conservador</h4><div class="small">Sem dados ainda.</div></div>
+    <div class="scenario-card"><h4>Moderado</h4><div class="small">Sem dados ainda.</div></div>
+    <div class="scenario-card"><h4>Sofisticado</h4><div class="small">Sem dados ainda.</div></div>
+  </div>
+
+  <div class="chart-wrap">
+    <canvas id="scenarioCanvas" height="220"></canvas>
+  </div>
+</section>

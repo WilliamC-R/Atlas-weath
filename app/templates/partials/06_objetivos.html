@@ -1,0 +1,31 @@
+
+<section class="panel tab-objetivos" id="panel-objetivos">
+  <div class="panel-head">
+    <div>
+      <h3>Objetivos e planos</h3>
+      <p>Capital alvo não é preenchido aqui. Ele é calculado no resumo e no PDF.</p>
+    </div>
+    <div class="chip">Direção do plano</div>
+  </div>
+
+  <div class="section-block">
+    <h4>Aposentadoria</h4>
+    <div class="grid-3">
+      <div class="field"><label>Renda mensal desejada</label><input class="currency" id="desired_monthly_income_future" value="R$ 0,00"></div>
+      <div class="field"><label>Modo de retirada</label><select id="retirement_mode"><option value="somente_rentabilidade">Somente rentabilidade</option><option value="rentabilidade_e_principal" selected>Rentabilidade + principal</option><option value="somente_principal">Somente principal</option></select></div>
+      <div class="field"><label>Anos de usufruto calculado até 100</label><input type="number" id="retirement_years" value="40" readonly></div>
+      <div class="field"><label>Taxa esperada no usufruto (% a.a.)</label><input type="number" step="0.01" id="retirement_return_rate" value="8.00"></div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h4>Eventos de vida e objetivos</h4>
+    <div class="section-help">Adicione metas como viagem, carro, imóvel, faculdade, sucessão ou objetivos livres.</div>
+    <div class="inline-tools">
+      <button class="btn btn-secondary" type="button" id="addLifeEventBtn">Adicionar evento</button>
+      <button class="btn btn-secondary" type="button" id="addGoalBtn">Adicionar objetivo</button>
+    </div>
+    <div id="lifeEventsList" class="dynamic-list"></div>
+    <div id="goalsList" class="dynamic-list"></div>
+  </div>
+</section>

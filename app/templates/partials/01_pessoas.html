@@ -1,0 +1,70 @@
+
+<section class="panel active tab-pessoas" id="panel-pessoas">
+  <div class="panel-head">
+    <div>
+      <h3>Pessoas e família</h3>
+      <p>Dados básicos do cliente. A idade é calculada automaticamente pela data de nascimento.</p>
+    </div>
+    <div class="chip">Entrada principal</div>
+  </div>
+
+  <div class="section-block">
+    <h4>Configuração da reunião</h4>
+    <div class="grid-3">
+      <div class="field">
+        <label>Tipo de reunião</label>
+        <select id="meetingType">
+          <option value="single">Uma pessoa</option>
+          <option value="couple">Casal / dupla</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Renda considerada</label>
+        <select id="incomeMode">
+          <option value="single">Somente titular</option>
+          <option value="family">Renda familiar consolidada</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Data da simulação</label>
+        <input type="date" id="simulationDate">
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h4>Participantes</h4>
+    <div class="person-card">
+      <h5>Titular</h5>
+      <div class="grid-4">
+        <div class="field"><label>Nome completo</label><input id="client_name" value="Cliente"></div>
+        <div class="field"><label>CPF</label><input id="cpf1" placeholder="000.000.000-00"></div>
+        <div class="field"><label>Data de nascimento</label><input type="date" id="birth1"></div>
+        <div class="field"><label>Idade calculada</label><input type="number" id="age" value="35" readonly></div>
+        <div class="field"><label>Profissão</label><input id="profession1"></div>
+        <div class="field"><label>Renda mensal principal</label><input class="currency" id="monthly_income" value="R$ 0,00"></div>
+        <div class="field"><label>Vai trabalhar até</label><input type="number" id="target_age" value="60" min="19"></div>
+        <div class="field"><label>Expectativa usada</label><input type="number" id="life_expectancy_1" value="100" readonly></div>
+      </div>
+    </div>
+
+    <div id="partnerSection" class="person-card hidden">
+      <h5>Parceiro(a)</h5>
+      <div class="grid-4">
+        <div class="field"><label>Nome completo</label><input id="partner_name"></div>
+        <div class="field"><label>CPF</label><input id="cpf2" placeholder="000.000.000-00"></div>
+        <div class="field"><label>Data de nascimento</label><input type="date" id="birth2"></div>
+        <div class="field"><label>Idade calculada</label><input type="number" id="partner_age" value="0" readonly></div>
+        <div class="field"><label>Profissão</label><input id="profession2"></div>
+        <div class="field"><label>Renda mensal</label><input class="currency" id="partner_income" value="R$ 0,00"></div>
+        <div class="field"><label>Vai trabalhar até</label><input type="number" id="partner_target_age" value="60"></div>
+        <div class="field"><label>Expectativa usada</label><input type="number" id="life_expectancy_2" value="100" readonly></div>
+      </div>
+    </div>
+
+    <div class="inline-tools">
+      <button class="btn btn-secondary" id="addDependentBtn" type="button">Adicionar dependente</button>
+    </div>
+    <div id="dependentsList" class="dynamic-list"></div>
+  </div>
+</section>

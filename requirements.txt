@@ -1,0 +1,12 @@
+fastapi>=0.118.3,<0.120
+uvicorn[standard]>=0.35.0,<0.36
+jinja2==3.1.6
+python-multipart==0.0.20
+sqlalchemy==2.0.43
+psycopg[binary]==3.2.10
+pydantic>=2.12,<3
+pydantic-settings>=2.10,<3
+reportlab==4.4.3
+gunicorn==23.0.0
+httpx==0.28.1
+pytest==8.4.1

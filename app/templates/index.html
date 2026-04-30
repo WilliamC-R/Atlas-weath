@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form id="atlasForm" class="content">
+  {% include "partials/01_pessoas.html" %}
+  {% include "partials/02_patrimonio.html" %}
+  {% include "partials/03_carteira_atual.html" %}
+  {% include "partials/04_receitas.html" %}
+  {% include "partials/05_custos_poupanca.html" %}
+  {% include "partials/06_objetivos.html" %}
+  {% include "partials/07_protecao_previdencia.html" %}
+  {% include "partials/08_resumo.html" %}
+  {% include "partials/09_cenarios.html" %}
+
+  <div class="footer-actions">
+    <div class="text">
+      Atlas Wealth organiza a reunião, calcula o plano e gera PDF com diagnóstico patrimonial, carteira atual, cenários, proteção e recomendações.
+    </div>
+    <div class="inline-tools">
+      <button class="btn btn-ghost" type="reset">Limpar formulário</button>
+      <button class="btn btn-primary" type="submit">Gerar plano</button>
+    </div>
+  </div>
+</form>
+{% endblock %}

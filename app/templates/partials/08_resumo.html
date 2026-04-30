@@ -1,0 +1,65 @@
+
+<section class="panel tab-resumo" id="panel-resumo">
+  <div class="panel-head">
+    <div>
+      <h3>Resumo do plano</h3>
+      <p>Diagnóstico, termômetro, carteira atual, premissas e recomendações automáticas.</p>
+    </div>
+    <div class="chip">Diagnóstico</div>
+  </div>
+
+  <div class="section-block">
+    <h4>Premissas da simulação</h4>
+    <div class="section-help">Pré-setadas e editáveis para cenários hipotéticos.</div>
+    <div class="premise-grid">
+      <div class="premise-box"><h5>Selic estrutural (% a.a.)</h5><div class="field"><input id="selic_structural" class="percent" type="number" step="0.01" value="5.50"></div></div>
+      <div class="premise-box"><h5>Banda superior (p.p.)</h5><div class="field"><input id="selic_band_up" class="percent" type="number" step="0.01" value="2.00"></div></div>
+      <div class="premise-box"><h5>Banda inferior (p.p.)</h5><div class="field"><input id="selic_band_down" class="percent" type="number" step="0.01" value="1.00"></div></div>
+      <div class="premise-box"><h5>Inflação assumida (% a.a.)</h5><div class="field"><input id="inflation_assumption" class="percent" type="number" step="0.01" value="5.00"></div></div>
+      <div class="premise-box"><h5>Horizonte principal</h5><div class="field"><input id="simulation_years" type="number" value="40"></div></div>
+      <div class="premise-box"><h5>Horizonte intermediário</h5><div class="field"><input id="scenario_short_years" type="number" value="20"></div></div>
+    </div>
+  </div>
+
+  <div class="summary-row">
+    <div class="summary-card"><div class="k">Patrimônio atual</div><div class="v" id="outCurrentNetWorth">R$ 0,00</div></div>
+    <div class="summary-card"><div class="k">Patrimônio projetado</div><div class="v" id="outFutureValue">R$ 0,00</div></div>
+    <div class="summary-card"><div class="k">Capital alvo</div><div class="v" id="outTargetCapital">R$ 0,00</div></div>
+    <div class="summary-card"><div class="k">Gap de capital</div><div class="v" id="outCapitalGap">R$ 0,00</div></div>
+  </div>
+
+  <div class="summary-row mt-12">
+    <div class="summary-card"><div class="k">Proteção sugerida</div><div class="v" id="outProtectionNeeded">R$ 0,00</div></div>
+    <div class="summary-card"><div class="k">Cobertura atual</div><div class="v" id="outCurrentCoverage">R$ 0,00</div></div>
+    <div class="summary-card"><div class="k">Gap de proteção</div><div class="v" id="outProtectionGap">R$ 0,00</div></div>
+    <div class="summary-card"><div class="k">Status</div><div class="v" id="outThermometerStatus">-</div></div>
+  </div>
+
+  <div class="section-block">
+    <h4>Diagnóstico da carteira atual</h4>
+    <div class="summary-row">
+      <div class="summary-card"><div class="k">Carteira informada</div><div class="v" id="outPortfolioTotal">R$ 0,00</div></div>
+      <div class="summary-card"><div class="k">Perfil identificado</div><div class="v" id="outPortfolioProfile">-</div></div>
+      <div class="summary-card"><div class="k">Nota da carteira</div><div class="v" id="outPortfolioScore">0 / 100</div></div>
+      <div class="summary-card"><div class="k">Risco estimado</div><div class="v" id="outPortfolioRisk">0%</div></div>
+    </div>
+    <div class="grid-2 mt-12">
+      <div><h5>Diagnóstico</h5><ul id="portfolioDiagnosticsList"></ul></div>
+      <div><h5>Recomendações</h5><ul id="portfolioRecommendationsList"></ul></div>
+    </div>
+    <div class="table-wrap"><table id="portfolioComparisonTable"></table></div>
+  </div>
+
+  <div class="section-block">
+    <h4>Termômetro de aderência ao objetivo</h4>
+    <div class="thermo"><div class="thermo-bar" id="thermoBar"></div></div>
+    <div class="thermo-labels"><span id="thermoPercent">0%</span><span id="thermoRemaining">100% restante</span></div>
+  </div>
+
+  <div class="section-block">
+    <h4>Recomendações automáticas</h4>
+    <ul id="actionPlanList"></ul>
+    <p class="hint" id="pensionRecommendation"></p>
+    <a id="pdfButton" class="btn btn-primary hidden" href="#" target="_blank">Baixar PDF</a>
+  </div>
+</section>

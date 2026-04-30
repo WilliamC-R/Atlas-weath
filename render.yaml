@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: atlas-wealth-web
+    runtime: python
+    plan: starter
+    autoDeploy: true
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.14.3
+      - key: APP_ENV
+        value: production
+      - key: APP_NAME
+        value: Atlas Wealth
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: atlas-wealth-db
+          property: connectionString
+      - key: TAX_REGIME_DEFAULT
+        value: lucro_presumido
+      - key: DEFAULT_REAL_RETURN
+        value: 0.06
+      - key: DEFAULT_INFLATION
+        value: 0.04
+      - key: DEFAULT_CDI
+        value: 0.115
+
+databases:
+  - name: atlas-wealth-db
+    plan: starter
+    databaseName: atlas_wealth
+    user: atlas_wealth_user

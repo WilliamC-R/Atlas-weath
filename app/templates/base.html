@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas Wealth</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='/css/base.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='/css/components.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='/css/tabs.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='/css/responsive.css') }}">
+</head>
+<body>
+<div class="app">
+  <header class="hero">
+    <h1>Atlas Wealth</h1>
+    <p>Diagnóstico patrimonial, planejamento de vida, proteção, carteira atual e cenários de investimento em uma única experiência de atendimento.</p>
+  </header>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="badge">AW</div>
+        <div>
+          <h2>Atlas Wealth</h2>
+          <small>Wealth planning comercial</small>
+        </div>
+      </div>
+      <nav class="nav">
+        <button class="nav-btn active" type="button" data-panel="pessoas"><div class="num">01</div><div><div class="title">Pessoas</div><div class="desc">Cliente, parceiro e dependentes.</div></div></button>
+        <button class="nav-btn" type="button" data-panel="patrimonio"><div class="num">02</div><div><div class="title">Patrimônio</div><div class="desc">Bens, investimentos e ativos.</div></div></button>
+        <button class="nav-btn" type="button" data-panel="carteira"><div class="num">03</div><div><div class="title">Carteira atual</div><div class="desc">Alocação, risco e nota.</div></div></button>
+        <button class="nav-btn" type="button" data-panel="receitas"><div class="num">04</div><div><div class="title">Receitas</div><div class="desc">Fontes recorrentes de renda.</div></div></button>
+        <button class="nav-btn" type="button" data-panel="custos"><div class="num">05</div><div><div class="title">Custos e poupança</div><div class="desc">Despesas e aporte planejado.</div></div></button>
+        <button class="nav-btn" type="button" data-panel="objetivos"><div class="num">06</div><div><div class="title">Objetivos</div><div class="desc">Aposentadoria e eventos.</div></div></button>
+        <button class="nav-btn" type="button" data-panel="protecao"><div class="num">07</div><div><div class="title">Proteção</div><div class="desc">Seguro, sucessão e previdência.</div></div></button>
+        <button class="nav-btn" type="button" data-panel="resumo"><div class="num">08</div><div><div class="title">Resumo</div><div class="desc">Diagnóstico e recomendações.</div></div></button>
+        <button class="nav-btn" type="button" data-panel="cenarios"><div class="num">09</div><div><div class="title">Cenários</div><div class="desc">Conservador, moderado e sofisticado.</div></div></button>
+      </nav>
+    </aside>
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+</div>
+
+<script src="{{ url_for('static', path='/js/state.js') }}"></script>
+<script src="{{ url_for('static', path='/js/forms.js') }}"></script>
+<script src="{{ url_for('static', path='/js/charts.js') }}"></script>
+<script src="{{ url_for('static', path='/js/app.js') }}"></script>
+</body>
+</html>

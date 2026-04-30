@@ -1,0 +1,64 @@
+
+<section class="panel tab-carteira" id="panel-carteira">
+  <div class="panel-head">
+    <div>
+      <h3>Carteira atual do cliente</h3>
+      <p>Registre como o cliente já investe hoje para gerar diagnóstico, risco, nota e recomendação no PDF.</p>
+    </div>
+    <div class="chip">Investimentos atuais</div>
+  </div>
+
+  <div class="section-block">
+    <h4>Alocação atual</h4>
+    <div class="section-help">Informe os valores em reais. O sistema calcula percentuais, concentração e risco automaticamente.</div>
+    <div class="toggle-grid" id="portfolioCards"></div>
+  </div>
+
+  <div class="section-block">
+    <h4>Perfil percebido e respostas</h4>
+    <div class="grid-3">
+      <div class="field">
+        <label>Como o cliente se considera?</label>
+        <select id="portfolio_perceived_profile">
+          <option value="nao_sei">Não sabe</option>
+          <option value="conservador">Conservador</option>
+          <option value="moderado">Moderado</option>
+          <option value="sofisticado">Sofisticado</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Objetivo da carteira atual</label>
+        <select id="portfolio_goal_answer">
+          <option value="nao_informado">Não informado</option>
+          <option value="preservacao">Preservação</option>
+          <option value="renda">Geração de renda</option>
+          <option value="crescimento">Crescimento</option>
+          <option value="liquidez">Liquidez</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Conhecimento sobre risco</label>
+        <select id="portfolio_risk_answer">
+          <option value="nao_informado">Não informado</option>
+          <option value="baixo">Baixo</option>
+          <option value="medio">Médio</option>
+          <option value="alto">Alto</option>
+        </select>
+      </div>
+    </div>
+    <div class="field mt-12">
+      <label>Observações sobre a carteira</label>
+      <textarea id="portfolio_notes" placeholder="Ativos concentrados, produtos atuais, intenção de mudança, restrições..."></textarea>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h4>Prévia</h4>
+    <div class="summary-row">
+      <div class="summary-card"><div class="k">Total informado</div><div class="v" id="portfolioTotalPreview">R$ 0,00</div></div>
+      <div class="summary-card"><div class="k">Classes preenchidas</div><div class="v" id="portfolioClassesPreview">0</div></div>
+      <div class="summary-card"><div class="k">Maior concentração</div><div class="v" id="portfolioConcentrationPreview">-</div></div>
+      <div class="summary-card"><div class="k">Resultado</div><div class="v">PDF</div></div>
+    </div>
+  </div>
+</section>

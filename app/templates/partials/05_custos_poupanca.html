@@ -1,0 +1,36 @@
+
+<section class="panel tab-custos" id="panel-custos">
+  <div class="panel-head">
+    <div>
+      <h3>Custos e capacidade de poupança</h3>
+      <p>O sistema calcula receita menos custos. O aporte mensal sugerido pode ser editado conforme decisão do cliente.</p>
+    </div>
+    <div class="chip">Fluxo de saída</div>
+  </div>
+
+  <div class="section-block">
+    <h4>Custos mensais</h4>
+    <div class="toggle-grid" id="expenseCards"></div>
+  </div>
+
+  <div class="section-block">
+    <h4>Reserva de emergência</h4>
+    <div class="yn-card">
+      <div class="yn-row">
+        <span>Cliente já possui reserva de emergência?</span>
+        <label><input type="radio" name="emergencyReserve" value="sim"> Sim</label>
+        <label><input type="radio" name="emergencyReserve" value="nao" checked> Não</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h4>Capacidade de poupança</h4>
+    <div class="section-help">Receita mensal total menos custos mensais. O valor recomendado vira aporte, mas pode ser ajustado.</div>
+    <div class="grid-3">
+      <div class="field"><label>Receita mensal total</label><input class="currency" id="calculated_total_income" value="R$ 0,00" readonly></div>
+      <div class="field"><label>Custo mensal total</label><input class="currency" id="calculated_total_expenses" value="R$ 0,00" readonly></div>
+      <div class="field"><label>Aporte mensal planejado</label><input class="currency" id="monthly_contribution" value="R$ 0,00"></div>
+    </div>
+  </div>
+</section>
